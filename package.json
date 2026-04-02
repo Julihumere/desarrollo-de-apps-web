@@ -1,0 +1,27 @@
+{
+  "name": "desarrollo-de-apps-web",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Julihumere/desarrollo-de-apps-web#readme",
+  "bugs": {
+    "url": "https://github.com/Julihumere/desarrollo-de-apps-web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julihumere/desarrollo-de-apps-web.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}

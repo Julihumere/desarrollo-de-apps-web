@@ -9,6 +9,20 @@
 // hace el animal al gritar]”. Hacer uso del método “gritar” y el acceso a la propiedad
 // “nombre” para cumplir el objetivo.
 
+// creo el enum con dias de la semana.
+enum diasSemana {
+  Lunes = "Lunes",
+  Martes = "Martes",
+  Miercoles = "Miercoles",
+  Jueves = "Jueves",
+  Viernes = "Viernes",
+  Sabado = "Sabado",
+  Domingo = "Domingo"
+}
+
+// creo variable que solo acepte numero o string.
+let dato: string | number;
+
 interface Animal {
   nombre: string;
   gritar(): string;
@@ -55,3 +69,16 @@ const vaca = new Vaca("Lola");
 describirAnimal(perro);
 describirAnimal(gato);
 describirAnimal(vaca);
+
+/*
+const hoyEs: diasSemana = diasSemana.Lunes;
+//pruebo enum
+console.log("Hoy es:", hoyEs);*/
+
+// primero le pongo el nombre del mejor jugador de la historia.
+dato = "Messi";
+console.log(dato);
+
+// despues lo remplazo con 10.
+dato = 10;
+console.log(dato);

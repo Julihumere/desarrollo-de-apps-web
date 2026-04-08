@@ -82,3 +82,43 @@ console.log(dato);
 // despues lo remplazo con 10.
 dato = 10;
 console.log(dato);
+
+// 8. Clase genérica que implementa la interfaz Fila
+interface Fila<T> {
+  agregar(elemento: T): void;
+  remover(): T | undefined;
+}
+
+class FilaGenerica<T> implements Fila<T> {
+  private elementos: T[] = [];
+
+  agregar(elemento: T): void {
+    this.elementos.push(elemento);
+  }
+
+  remover(): T | undefined {
+    return this.elementos.shift();
+  }
+}
+
+// 9. Fila para números, strings y animales
+const filaNumeros: FilaGenerica<number> = new FilaGenerica<number>();
+const filaStrings: FilaGenerica<string> = new FilaGenerica<string>();
+const filaAnimales: FilaGenerica<Animal> = new FilaGenerica<Animal>();
+
+// 10. Agregar elementos y remover uno de cada fila
+filaAnimales.agregar(perro);
+filaAnimales.agregar(gato);
+filaAnimales.agregar(vaca);
+
+filaNumeros.agregar(1);
+filaNumeros.agregar(2);
+filaNumeros.agregar(3);
+
+filaStrings.agregar("hola");
+filaStrings.agregar("mundo");
+filaStrings.agregar("typescript");
+
+filaAnimales.remover();
+filaNumeros.remover();
+filaStrings.remover();
